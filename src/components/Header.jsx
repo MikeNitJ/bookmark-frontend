@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav>
-        <Link to="/">
+    <nav className="flex flex-row justify-around p-5">
+        <Link className="hover:italic" to="/">
             <div>Home</div> 
         </Link>
-        <Link to="/">
+        <Link className="hover:italic" to="/">
             <div>New Bookmark</div> 
         </Link>
 

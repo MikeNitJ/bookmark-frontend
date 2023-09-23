@@ -1,5 +1,5 @@
 import { redirect } from "react-router-dom";
-// const url = 'https://people-app-q89t.onrender.com'
+const url = 'https://bookmark-backend-uza1.onrender.com'
 
 export const createAction = async ({ request }) => {
     const formData = await request.formData()
@@ -9,12 +9,12 @@ export const createAction = async ({ request }) => {
         url: formData.get('url'),
     }
 
-    await fetch( url + '/people', {
+    await fetch( url + '/book', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(person),
+        body: JSON.stringify(bookmark),
     })
     return redirect('/')
 };
@@ -27,18 +27,18 @@ export const updateAction = async ({ params, request }) => {
         url: formData.get('url'),
     }
 
-    await fetch( url + '/people/' + params.id, {
+    await fetch( url + '/book/' + params.id, {
         method: 'PUT',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(person),
+        body: JSON.stringify(bookmark),
     })
     return redirect(`/${params.id}`)
 };
 
 export const deleteAction = async ({params}) => {
-    await fetch( url + '/people/' + params.id, {
+    await fetch( url + '/book/' + params.id, {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
