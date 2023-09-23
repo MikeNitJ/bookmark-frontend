@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLoaderData, Link, Form } from 'react-router-dom'
 import { deleteAction } from '../action';
+import '../styles.css'
 
 const Index = () => {
   const bookmark = useLoaderData();
@@ -17,7 +18,7 @@ console.log(bookmark);
 
     <h2>Bookmark</h2>
     {bookmark.map((book) => {
-    return <div key={book._id} className=''>
+    return <div key={book._id} className='card'>
       <Link to={`/${book._id}`}>
         {book.title}
       </Link>
