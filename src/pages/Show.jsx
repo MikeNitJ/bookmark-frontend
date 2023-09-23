@@ -5,9 +5,11 @@ const Show = () => {
   const bookmark = useLoaderData();
   return (
     <div>
-      <h1>{bookmark.name}</h1>
-      <img src={bookmark.image} alt={bookmark.name} />
       <h1>{bookmark.title}</h1>
+
+      <a href={bookmark.url}>
+        <button>Check it out!</button>
+      </a>
     </div>
   )
 }

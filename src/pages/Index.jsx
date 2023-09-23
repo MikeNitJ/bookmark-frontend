@@ -19,21 +19,21 @@ console.log(bookmark);
     {bookmark.map((book) => {
     return <div key={book._id} className=''>
       <Link to={`/${book._id}`}>
-        {book.name}
+        {book.title}
       </Link>
-      <img src={book.image} alt={book.name} />
-      <h3>{book.title}</h3>
+
+
 
     <Form action={`/delete/${book._id}`} method='POST'>
-      <button type='submit' className="bg-pink-300 rounded-full" value='create a bookmark'> Delete Me </button>
+      <button type='submit'  value='create a bookmark'> Delete Me </button>
     </Form>
 
     <Link to={`/${book._id}/edit`}>
-    <button type='submit' className="bg-pink-300 rounded-full" value='edit a bookmark'>Edit {book.name}</button>
+    <button type='submit'  value='edit a bookmark'>Edit {book.name}</button>
     </Link>
 
     </div>
-  })};
+  })}
   </div>
   );
 }
