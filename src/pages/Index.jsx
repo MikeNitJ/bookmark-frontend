@@ -4,14 +4,14 @@ import { deleteAction } from '../action';
 
 const Index = () => {
   const bookmark = useLoaderData();
-
+console.log(bookmark);
 
   return (
   <div>
     <h2>Create a Bookmark</h2>
     <Form action="/create" method='POST'>
-      <input type='text' name="title" placeholder='enter title ples' />
-      <input type='text' name="url" placeholder='enter url ples' />
+      <input type='text' name="title" placeholder='enter title please' />
+      <input type='text' name="url" placeholder='enter url please' />
       <input type='submit' value='create a bookmark' />
     </Form>
 

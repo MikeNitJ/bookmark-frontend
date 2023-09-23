@@ -14,8 +14,8 @@ const Update = () => {
   return (
     <div>
     <Form action={`/update/${bookmark._id}`} method='POST'>
-      <input type='text' value={formData.title} onChange={handleChange} name="title" placeholder='enter title ples' />
-      <input type='text' value={formData.url} onChange={handleChange} name="url" placeholder='enter url ples' />
+      <input type='text' value={formData.title} onChange={handleChange} name="title" placeholder='enter title pls' />
+      <input type='text' value={formData.url} onChange={handleChange} name="url" placeholder='enter url pls' />
       <input type='submit' value='create a bookmark' />
     </Form>
     </div>
